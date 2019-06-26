@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
-const SubscribersSchema = new mongoose.Schema({
+const LikesSchema = new mongoose.Schema({
     user_id: [{type: ObjectId, ref: 'Users'}],
-    subscribe_at: {
+    post_id: [{type: ObjectId, ref: 'Posts'}],
+    liked_at: {
         type: Date,
         required: true,
         default: Date.now
     }
-}, {collection: 'subscribers'});
+}, {collection: 'likes'});
 
-module.exports = mongoose.model('Subscribers', SubscribersSchema);
+module.exports = mongoose.model('Likes', LikesSchema);

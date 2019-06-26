@@ -39,7 +39,7 @@ Then visit [http://localhost:3000/](http://localhost:3000/)
 ## Authors
 
 * **Olga Demyanenko** - [odemyanenko](https://github.com/odemyanenko)
-* **Marina** - [anauk](https://github.com/anauk)
+* **Marina Savluchinska** - [anauk](https://github.com/anauk)
 * **Volodymyr Shkil** - [vovashkil](https://github.com/vovashkil)
 
 See also the list of [contributors](https://github.com/odemyanenko/project-instagram/contributors) who participated in this project.
