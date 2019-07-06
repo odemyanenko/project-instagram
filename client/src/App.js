@@ -10,6 +10,7 @@ import {far} from '@fortawesome/free-regular-svg-icons';
 import Header from "../src/components/header";
 
 import HomePage from "../src/components/pages/homePage";
+import PersonalPage from "./components/pages/personalPage/personalPage";
 library.add(fab, fas, far);
 
 
@@ -19,6 +20,7 @@ function App() {
             <Header/>
 
             <HomePage/>
+            <PersonalPage/>
 
         </div>
     );

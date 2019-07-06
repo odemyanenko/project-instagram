@@ -13,7 +13,6 @@ const Item =()=> {
         <div className="wrapper">
         <h2 className="title">Sovertee</h2>
         <p className="nickname">cvbbbc</p>
-            {/*<button className="sign">Подписаться</button>*/}
             <Button/>
         </div>
         </div>

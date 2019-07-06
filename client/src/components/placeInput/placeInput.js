@@ -12,11 +12,6 @@ class PlaceInput extends React.Component{
         })
     };
     postSubmitHandler=()=>{
-        /*e.preventDefault();*/
-        /*const {post} = this.state;
-        this.setState({post:''});
-        const smb = this.props.onTextAdded || (()=>{});
-        smb(post);*/
         if(this.state.post.trim()===''){
             return;
         }
@@ -32,7 +27,6 @@ class PlaceInput extends React.Component{
                 placeholder="enter more"/>
                 <button className="addReview"
                         type="submit"
-                        /*onClick={this.postSubmitHandler}*/
                     onClick={this.postSubmitHandler}
                 >Post</button>
             </div>

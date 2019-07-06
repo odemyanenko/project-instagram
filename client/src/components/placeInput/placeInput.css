@@ -1,0 +1,14 @@
+.cover{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.enter{
+    padding: 10px 10px;
+    width: 70%;
+    margin-right: 8px;
+}
+.addReview{
+    padding: 10px 10px;
+    width: 20%;
+}

@@ -4,6 +4,8 @@ import Item from "../../item";
 import Avatar from "../../avatar";
 import PlaceInput from "../../placeInput"
 import PostList from "../../postList";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import PhotoList from "../personalPage/photoList/photoList";
 
 class HomePage extends React.Component {
     state = {
@@ -27,8 +29,11 @@ class HomePage extends React.Component {
             <div className="homePage">
                 <Item/>
                 <Avatar/>
+                <a className="text-dark mx-2" href=""><FontAwesomeIcon icon={['fas', 'heart']} size="1x"/></a>
+
                 <PostList>{posts}</PostList>
                 <PlaceInput onTextAdded={this.textAddedHandler}/>
+
             </div>
         )
     }
