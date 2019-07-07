@@ -1,12 +1,19 @@
 import React from 'react';
 
 import './postList.css';
-import PlaceInput from "../placeInput";
+import PostItem from '../postItem';
 
-const PostList=props=> {
-   /* */
+const PostList = ({postList}) => {
+    const elements = postList.map((item) => {
+        const {id, ...itemProps} = item;
         return (
-            <div className="list">{props.post}</div>
-        )
+            <li key={id}>
+                <PostItem {...itemProps}/>
+            </li>
+        );
+    });
+    return (
+        <ul>{elements}</ul>
+    )
 };
 export default PostList;
