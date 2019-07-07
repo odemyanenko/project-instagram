@@ -1,5 +1,6 @@
 # IntelliJ
-
+node_modules/
+build/
 *.iml
 .idea/
 out/
