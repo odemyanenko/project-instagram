@@ -1,6 +1,4 @@
 .homePage{
-    border: 1px solid black;
-    /*width: 80%;*/
-    background-color: greenyellow;
-    grid-area: homePage;
+    margin: 0px 10px;
+    border: 1px solid darkgrey;
 }
