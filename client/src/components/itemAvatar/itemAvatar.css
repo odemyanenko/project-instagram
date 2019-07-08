@@ -2,11 +2,6 @@
     display: flex;
     padding: 1rem;
 }
-.avatar {
-    position: absolute;
-    top: 10px;
-    left: 40px;
-}
 .wrapper{
     margin-left: 15px;
 }

@@ -12,6 +12,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import HomePage from "../src/components/pages/homePage";
 import PersonalPage from "../src/components/pages/personalPage";
+import HomePageList from "../src/components/pages/homePageList";
 
 library.add(fab, fas, far, faInfoCircle);
 
@@ -21,8 +22,7 @@ function App() {
         <div>
             <Router>
                 <Header/>
-                {/* <HomePage/>
-            <PersonalPage/>*/}
+                <Route exact path="/" component={HomePageList}/>
                 <Route path="/home" component={HomePage}/>
                 <Route path="/personal" component={PersonalPage}/>
 

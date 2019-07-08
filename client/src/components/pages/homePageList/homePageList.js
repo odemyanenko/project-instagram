@@ -7,13 +7,45 @@ import Photo from "../personalPage/photoList/photoList";
 class HomePageList extends React.Component{
     state ={
         personalPage: [
-            {postList:{
+            { postList: {
+                    avatar: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+                    nickname: 'Vasa',
+                    name: 'Pupkin'},
+            imagePost: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+            message: 'hi',
+            liked:'3',
+            count:'6'},
 
-                }}
+            { postList: {
+                    avatar: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+                    nickname: 'Vasa',
+                    name: 'Pupkin'},
+                imagePost: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+                message: 'hi',
+                liked:'3',
+                count:'6'},
+
+            { postList: {
+                    avatar: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+                    nickname: 'Vasa',
+                    name: 'Pupkin'},
+                imagePost: 'https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/kave+310.jpg?w=500&h=278&fit=crop&crop=edges&auto=compress%2Cformat&s=fbc0d75299d7cfda0b3c60ea52ba4aaf',
+                message: 'hi',
+                liked:'3',
+                count:'6'},
         ]
     };
     renderList = (personalPage)=>{
-        return personalPage.map(page=><HomePage />)
+        return personalPage.map(page=><HomePage
+        avatar={page.avatar}
+        name={page.nickname}
+        nickname={page.nickname}
+        imagePost={page.imagePost}
+        message={page.message}
+        liked={page.liked}
+        count={page.count}
+
+        />)
     };
     render(){
         return(
