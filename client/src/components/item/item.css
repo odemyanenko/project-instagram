@@ -1,38 +1,29 @@
-.container{
-    width: 100%;
-    padding-left: 80px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.personal-container{
+    display: flex;
+    padding: 1rem;
 }
-
 .avatar {
     position: absolute;
-    top: 200px;
+    top: 10px;
     left: 40px;
 }
 .wrapper{
     margin-left: 15px;
 }
 .avatarImg{
-    width: 100%;
     width: 44px;
     height: 44px;
     border-radius: 22px;
-    margin-top: 10px;
+    margin-right: 10px;
 }
 .title{
     font-size: 20px;
     color:  #3c4560;
-    margin: 0px 0px;
 }
 .nickname{
     font-size: 16px;
     color: #b8bece;
     font-weight: 500;
-    margin: 0px 0px 5px 0px;
 }
 .sign{
 }

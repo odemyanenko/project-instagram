@@ -7,9 +7,9 @@ const PostList = ({postList}) => {
     const elements = postList.map((item) => {
         const {id, ...itemProps} = item;
         return (
-            <li key={id}>
+            <div key={id}>
                 <PostItem {...itemProps}/>
-            </li>
+            </div>
         );
     });
     return (

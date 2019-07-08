@@ -5,15 +5,13 @@ import Avatar from "../../avatar";
 import ItemAddPost from "../../itemAddPost"
 import PostList from "../../postList";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import PhotoList from "../personalPage/photoList/photoList";
+import { Link } from "react-router-dom";
 
 class HomePage extends React.Component {
     maxId = 100;
     state ={
         postList: [
-        {post: 'rqqqqaaswesssss', id: 1},
-        {post: 'errrrr', id: 2},
-        {post: 'sdddff', id: 3},
+        {post: '', id: 1}
     ]
 };
     addPost = (text) => {
@@ -36,10 +34,11 @@ class HomePage extends React.Component {
 
         return (
             <div className="homePage">
-                <Item/>
+                <Link to="/personal"><Item/></Link>
                 <Avatar/>
-                <a className="text-dark mx-2" href=""><FontAwesomeIcon icon={['fas', 'heart']} size="1x"/></a>
-
+                <FontAwesomeIcon icon={['fas', 'heart']}
+                                 size="1x"
+                                 style={{marginTop:10, marginLeft:40}}/>
                 <PostList postList={this.state.postList}/>
                 <ItemAddPost onTextAdded={this.addPost}/>
             </div>

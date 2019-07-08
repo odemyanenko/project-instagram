@@ -25,7 +25,7 @@ export default class PhotoList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 {this.renderList(this.state.photos)}
             </div>
         )

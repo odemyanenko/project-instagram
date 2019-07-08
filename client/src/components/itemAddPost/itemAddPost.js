@@ -13,7 +13,10 @@ class ItemAddPost extends React.Component {
     };
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.onTextAdded(this.state.post)
+        this.props.onTextAdded(this.state.post);
+        this.setState({
+            post:''
+        });
     };
 
     render() {
