@@ -2,7 +2,8 @@ import React from 'react';
 
 import './homePageList.css';
 import HomePage from "../homePage";
-import Photo from "../personalPage/photoList/photoList";
+import ListRecomendPeople from "../listRecomendPeople/listRecomendPeople";
+import ListLikedPeople from "../listLikedPeople/listLikedPeople";
 
 class HomePageList extends React.Component{
     state ={
@@ -36,7 +37,8 @@ class HomePageList extends React.Component{
         ]
     };
     renderList = (personalPage)=>{
-        return personalPage.map(page=><HomePage
+        return personalPage.map((page, i)=><HomePage
+            key={i}
         avatar={page.avatar}
         name={page.nickname}
         nickname={page.nickname}
@@ -51,6 +53,10 @@ class HomePageList extends React.Component{
         return(
             <div>
                 {this.renderList(this.state.personalPage)}
+
+                <ListLikedPeople/>
+
+                <ListRecomendPeople/>
             </div>
         )
     }

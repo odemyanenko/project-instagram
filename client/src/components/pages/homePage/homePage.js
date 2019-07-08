@@ -6,6 +6,7 @@ import ItemAddPost from "../../itemAddPost"
 import PostList from "../../postList";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import ListLikedPeople from "../listLikedPeople/listLikedPeople";
 
 class HomePage extends React.Component {
     maxId = 100;
@@ -55,6 +56,7 @@ const {avatar, name, nickname} = this.props;
                 <span>{this.state.count} отметок "Нравиться"</span>
                 <PostList postList={this.state.postList}/>
                 <ItemAddPost onTextAdded={this.addPost}/>
+
             </div>
         )
     }
