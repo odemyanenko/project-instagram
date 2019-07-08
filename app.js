@@ -2,7 +2,12 @@ const express = require('express')
 const app = express()
 const db = require('./db/db');
 
+// const usersRouter = require('./routes/users');
+// app.use("/users", usersRouter);
+
 db.connect();
+
+//require('./db/data');
 
 app.get('/', function (req, res) {
     res.send('Hello World')
