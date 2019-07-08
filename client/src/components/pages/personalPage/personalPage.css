@@ -1,0 +1,9 @@
+.personalPage{
+    margin: 0px 10px;
+    border: 1px solid darkgrey;
+}
+.personalItem{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
