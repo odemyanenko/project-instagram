@@ -1,3 +1,5 @@
 .header-container{
     padding: 15px 20px;
+    background-color: lightgray;
+    grid-area: header;
 }
