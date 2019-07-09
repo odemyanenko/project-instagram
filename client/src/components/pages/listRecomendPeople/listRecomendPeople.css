@@ -1,4 +1,7 @@
 .listWrapper{
-    width: 300px;
     border: 1px solid darkolivegreen;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 25%;
 }

@@ -4,9 +4,9 @@ import './homePageList.css';
 import HomePage from "../homePage";
 import ListRecomendPeople from "../listRecomendPeople";
 import ListLikedPeople from "../listLikedPeople";
+import InfiniteScroll from 'react-simple-infinite-scroll';
 
-
-class HomePageList extends React.Component {
+class HomePageListScroll extends React.Component {
     state = {
         personalPage: [
             {
@@ -69,36 +69,33 @@ class HomePageList extends React.Component {
                 }
             )
     }
-
-    /*renderList = (personalPage) => {
-        return personalPage.map((page, i) => <HomePage
-            key={i}
-            avatar={page.avatar}
-            name={page.nickname}
-            nickname={page.nickname}
-            imagePost={page.imagePost}
-            message={page.message}
-            liked={page.liked}
-            count={page.count}
-
-        />)*/
     render() {
-        const { personalPage } = this.state;
         return (
             <div>
-               {/* {this.renderList(this.state.personalPage)}
-*/}
-                {personalPage.map((person,i)=><HomePage
-                    key={i}
-                    avatar={person.avatar}
-                    name={person.nickname}
-                    nickname={person.nickname}
-                    imagePost={person.imagePost}
-                    message={person.message}
-                    liked={person.liked}
-                    count={person.count}
-                />)}
-
+               <InfiniteScroll
+                    throttle={100}
+                    threshold={300}
+                    isLoading={this.state.isLoading}
+                    hasMore={!!this.state.cursor}
+                    onLoadMore={this.loadMore}
+                >
+                    {this.state.personalPage.length > 0
+                        ? this.state.personalPage.map((person,i) =>
+                            <HomePage
+                                key={i}
+                                avatar={person.avatar}
+                                name={person.nickname}
+                                nickname={person.nickname}
+                                imagePost={person.imagePost}
+                                message={person.message}
+                                liked={person.liked}
+                                count={person.count}
+                            />)
+                        : null}
+                </InfiniteScroll>
+                {/*{this.state.isLoading && (
+                    <MyLoadingState />
+                )}*/}
 
                 <ListLikedPeople/>
 
@@ -107,4 +104,4 @@ class HomePageList extends React.Component {
         )
     }
 };
-export default HomePageList;
+export default HomePageListScroll;

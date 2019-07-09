@@ -1,7 +1,25 @@
 import React from 'react';
 import './itemAvatar.css';
 import Button from "../button/button";
+import ItemName from "../itemName/itemName";
+import ItemNickname from "../itemNickname/itemNickname";
+import Avatar from "../avatar/avatar";
 
+
+const ItemAvatar = (props) => {
+    return (
+        <div className="personal-container">
+            <Avatar avatar={props.avatar}/>
+            <div className="wrapper">
+            <ItemName name={props.name}/>
+            <ItemNickname nickname={props.nickname}/>
+            <Button/>
+            </div>
+        </div>
+    )
+};
+export default ItemAvatar;
+/*
 export default class ItemAvatar extends React.Component{
 render(){
     const content = <ItemView avatar={this.props}/>;
@@ -25,4 +43,6 @@ const ItemView =(props)=> {
         </div>
     </React.Fragment>
     )
-}
+}*/
+
+

@@ -1,4 +1,12 @@
 .homePage{
     margin: 0px 10px;
     border: 1px solid darkgrey;
+    width: 70%;
+}
+.wrapperAvatar{
+    display: flex;
+    padding: 1rem;
+}
+.content{
+    margin-left: 10px;
 }

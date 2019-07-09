@@ -4,6 +4,7 @@ import PhotoList from "./photoList/photoList";
 import ItemAvatar from "../../itemAvatar";
 
 export default class PersonalPage extends React.Component{
+    state={}
     render(){
         const className = "personalItem"
         return(
