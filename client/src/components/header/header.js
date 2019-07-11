@@ -1,15 +1,7 @@
-//npm i -S @fortawesome/free-solid-svg-icons
-//npm i -S @fortawesome/free-light-svg-icons
-
 import React from 'react';
-import './header.css';
-
-import SearchPanel from "../searchPanel";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
-import {faCompass, faHeart, faUser, faComment, faShareSquare, faBookmark} from '@fortawesome/free-regular-svg-icons';
-import {faCaretDown, faUserTag, faThList, faEllipsisH} from '@fortawesome/free-solid-svg-icons';
-import {faInstagram} from '@fortawesome/free-brands-svg-icons';
+import './header.css';
+import SearchPanel from "../searchPanel";
 
 const Icon = (props) => {
     return (
@@ -28,20 +20,21 @@ const InstagramHeader = () => {
 const Header = () => {
     return (
         <div className="header d-flex">
-            <Icon icon={faInstagram}/>
+            <Icon icon={['fab', 'instagram']}/>
             <InstagramHeader/>
             <SearchPanel/>
-            <Icon icon={faCaretDown}/>
-            <Icon icon={faCompass}/>
-            <Icon icon={faHeart}/>
+            <Icon icon={['fas', 'caret-down']}/>
+            <Icon icon={['far', 'compass']}/>
+            <Icon icon={['far', 'heart']}/>
             <Icon icon={['fas', 'heart']}/>
-            <Icon icon={faUser}/>
-            <Icon icon={faComment}/>
-            <Icon icon={faShareSquare}/>
-            <Icon icon={faBookmark}/>
-            <Icon icon={faUserTag}/>
-            <Icon icon={faThList}/>
-            <Icon icon={faEllipsisH}/>
+            <Icon icon={['far', 'user']}/>
+            <Icon icon={['far', 'comment']}/>
+
+            <Icon icon={['far', 'share-square']}/>
+            <Icon icon={['far', 'bookmark']}/>
+            <Icon icon={['fas', 'user-tag']}/>
+            <Icon icon={['fas', 'th-list']}/>
+            <Icon icon={['fas', 'ellipsis-h']}/>
         </div>
     )
 }
