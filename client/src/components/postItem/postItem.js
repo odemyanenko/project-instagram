@@ -1,5 +1,4 @@
 import React from 'react';
-import './postItem.css';
 
 class PostItem extends React.Component{
     render() {
@@ -9,5 +8,6 @@ class PostItem extends React.Component{
             </span>
         )
     }
-};
+}
+
 export default PostItem;

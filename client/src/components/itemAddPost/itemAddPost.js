@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './itemAddPost.css';
+import styles from './itemAddPost.module.scss';
 
 class ItemAddPost extends React.Component {
     state = {
@@ -15,19 +14,19 @@ class ItemAddPost extends React.Component {
         e.preventDefault();
         this.props.onTextAdded(this.state.post);
         this.setState({
-            post:''
+            post: ''
         });
     };
 
     render() {
         return (
-            <form className="cover" onSubmit={this.onSubmit}>
-                <input className="enter"
+            <form className={styles.cover} onSubmit={this.onSubmit}>
+                <input className={styles.enter}
                        type="text"
                        value={this.state.post}
                        onChange={this.changeHandler}
                        placeholder="enter more"/>
-                <button className="addReview"
+                <button className={styles.addReview}
                         type="submit"
                 >Post
                 </button>

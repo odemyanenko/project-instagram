@@ -1,25 +1,27 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import './header.css';
+import styles from './header.module.scss';
 import SearchPanel from "../searchPanel";
+import cx from 'classnames';
+import globalStyles from './../../assets/global-styles/bootstrap.module.css';
 
 const Icon = (props) => {
     return (
-        <a className="text-dark mx-2" href="">
-            <FontAwesomeIcon icon={props.icon} size="1x"/>
+        <a className={cx(globalStyles["text-dark"], globalStyles["mx-2"])} href="">
+            <FontAwesomeIcon icon={props.icon} size="2x"/>
         </a>
     )
 };
 
 const InstagramHeader = () => {
     return (
-        <h1 className="title mr-3 ml-3 "> Instagram </h1>
+        <h1 className={cx(styles.title, globalStyles["mr-3"], globalStyles["ml-3"])}> Instagram </h1>
     )
 };
 
 const Header = () => {
     return (
-        <div className="header d-flex">
+        <div className={cx(styles.header, globalStyles["d-flex"])}>
             <Icon icon={['fab', 'instagram']}/>
             <InstagramHeader/>
             <SearchPanel/>
@@ -37,5 +39,6 @@ const Header = () => {
             <Icon icon={['fas', 'ellipsis-h']}/>
         </div>
     )
-}
+};
+
 export default Header;

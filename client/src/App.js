@@ -1,6 +1,5 @@
 import React from 'react';
 import './fontawesome';
-import './App.css';
 
 import Header from "../src/components/header";
 import {BrowserRouter as Router, Route} from "react-router-dom";

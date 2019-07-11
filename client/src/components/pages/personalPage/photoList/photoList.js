@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from "../photo/photo";
+import globalStyles from './../../../../assets/global-styles/bootstrap.module.css';
 
 export default class PhotoList extends React.Component {
     state = {
@@ -25,7 +26,7 @@ export default class PhotoList extends React.Component {
 
     render() {
         return (
-            <div className="row">
+            <div className={globalStyles.row}>
                 {this.renderList(this.state.photos)}
             </div>
         )

@@ -44,4 +44,8 @@ Then visit [http://localhost:3000/](http://localhost:3000/)
 
 See also the list of [contributors](https://github.com/odemyanenko/project-instagram/contributors) who participated in this project.
 
+## Used References
+* [SASS and modules](https://medium.com/@shalomdave2/using-sass-modules-in-create-react-app-v2-306950fd8e99)
+* [Bootstrap and modules](https://medium.com/@marcelwopperer/how-to-use-bootstrap-in-your-react-app-using-css-modules-73fbc52de081)
+
 <br /> 

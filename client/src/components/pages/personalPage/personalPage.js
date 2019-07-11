@@ -1,15 +1,14 @@
 import React from 'react';
-import './personalPage.css';
+import styles from './personalPage.module.scss';
 import PhotoList from "./photoList/photoList";
 import Item from "../../item";
 
-export default class PersonalPage extends React.Component{
-    render(){
-        const className = "personalItem"
-        return(
-            <div className="personalPage">
-                <Item className={className}/>
-            <PhotoList/>
+export default class PersonalPage extends React.Component {
+    render() {
+        return (
+            <div className={styles.personalPage}>
+                <Item className={styles.personalItem}/>
+                <PhotoList/>
             </div>
         )
     }
