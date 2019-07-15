@@ -1,27 +1,25 @@
 import React from 'react';
-import './fontawesome';
+import {Route} from "react-router-dom";
 
 import Header from "../src/components/header";
-import {BrowserRouter as Router, Route} from "react-router-dom";
-
 import Sidebar from "../src/components/sidebar";
-
 import HomePage from "../src/components/pages/homePage";
 import PersonalPage from "../src/components/pages/personalPage";
+
+import './fontawesome';
 import classes from "./App.module.scss"
 
 function App() {
     return (
-        <Router>
-            <div className={classes["app-wrapper"]}>
-                <Header/>
-                <Sidebar/>
-                <div className={classes.content}>
-                    <Route path="/home" component={HomePage}/>
-                    <Route path="/personal" component={PersonalPage}/>
-                </div>
+        <div className={classes.appWrapper}>
+            <Header/>
+            <Sidebar/>
+            <div className={classes.content}>
+                <Route path="/home" component={HomePage}/>
+                <Route path="/personal" component={PersonalPage}/>
             </div>
-        </Router>
+        </div>
+
     );
 }
 

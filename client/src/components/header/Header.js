@@ -7,7 +7,7 @@ import globalStyles from './../../assets/global-styles/bootstrap.module.css';
 
 const Icon = (props) => {
     return (
-        <a className={cx(globalStyles["text-dark"], globalStyles["mx-2"])} href="">
+        <a className={cx(globalStyles["text-dark"], globalStyles["mx-2"])} href="#">
             <FontAwesomeIcon icon={props.icon} size="2x"/>
         </a>
     )

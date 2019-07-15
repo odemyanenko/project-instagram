@@ -28,7 +28,7 @@ class ItemAddPost extends React.Component {
                        placeholder="enter more"/>
                 <button className={styles.addReview}
                         type="submit"
-                >Post
+                >Add Your Post
                 </button>
             </form>
         )
