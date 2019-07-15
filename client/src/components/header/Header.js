@@ -1,6 +1,6 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import styles from './header.module.scss';
+import styles from './Header.module.scss';
 import SearchPanel from "../searchPanel";
 import cx from 'classnames';
 import globalStyles from './../../assets/global-styles/bootstrap.module.css';
