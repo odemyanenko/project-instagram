@@ -1,11 +1,19 @@
 .app-wrapper {
+  width: 1200px;
+  margin: 0 auto;
   background-color: lightcyan;
 
   display: grid;
 
-  grid-template-areas: "header header" "sidebar context";
+  grid-template-areas: "header header" "sidebar content";
 
   grid-template-rows: 100px 1fr;
   grid-template-columns: 2fr 10fr;
 
+}
+
+.content {
+  grid-area: content;
+  background-color: palegreen;
+  padding: 10px;
 }

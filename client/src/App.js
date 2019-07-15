@@ -16,7 +16,7 @@ function App() {
             <div className={classes["app-wrapper"]}>
                 <Header/>
                 <Sidebar/>
-                <div>
+                <div className={classes.content}>
                     <Route path="/home" component={HomePage}/>
                     <Route path="/personal" component={PersonalPage}/>
                 </div>
