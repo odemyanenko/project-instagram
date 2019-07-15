@@ -11,7 +11,11 @@ class HomePage extends React.Component {
     maxId = 100;
     state = {
         postList: [
-            {post: '', id: 1}
+            {post: 'Hi, how are you?', id: 1},
+            {post: 'HaHaha', id: 2},
+            {post: 'Hello!', id: 3},
+            {post: 'BlaBla', id: 4},
+            {post: 'XeXe', id: 6}
         ]
     };
     addPost = (text) => {
