@@ -5,6 +5,8 @@ import Header from "../src/components/header";
 import Sidebar from "../src/components/sidebar";
 import HomePage from "../src/components/pages/homePage";
 import PersonalPage from "../src/components/pages/personalPage";
+import UsersContainer from "./components/users/UsersContainer";
+
 
 import './fontawesome';
 import classes from "./App.module.scss"
@@ -17,6 +19,7 @@ function App() {
             <div className={classes.content}>
                 <Route path="/home" component={HomePage}/>
                 <Route path="/personal" component={PersonalPage}/>
+                <Route path="/users" render={() => <UsersContainer />}/>
             </div>
         </div>
 
