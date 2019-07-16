@@ -2,7 +2,7 @@ import {
     createUser,
     getUserById,
     loginUser
-} from "./../services/userService";
+} from "../services/userService";
 
 //const User = require('../dao/models/users');
 

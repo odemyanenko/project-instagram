@@ -1,4 +1,4 @@
-import User from "./../dao/models/users";
+import User from "./models/users";
 
 export function createUser(data, callback) {
     const userModel = new User(data);

@@ -64,8 +64,10 @@ let Users = (props) => {
         // ]);
 
         axios.get("https://social-network.samuraijs.com/api/1.0/users")
+        // axios.get("http://localhost:8000/api/users")
             .then(response => {
                 props.setUsers(response.data.items);
+                // props.setUsers(response.data.users);
             });
     }
 

@@ -2,7 +2,7 @@ import {
     createUser as createUserDAO,
     getUserById as getUserByIdDAO,
     getUserByEmail as getUserByEmailDAO
-} from "./../dao/UserDAO";
+} from "../dao/UserDAO";
 
 export function createUser(data, callback) {
     createUserDAO(data, callback);
