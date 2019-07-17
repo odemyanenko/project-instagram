@@ -6,22 +6,22 @@ export default class PhotoList extends React.Component {
     state = {
         photos: [
             {
-                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
+                id: 1, src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
             },
             {
-                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
+                id: 2, src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
             },
             {
-                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
+                id: 3, src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
             },
             {
-                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
+                id: 4, src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0f9RVwiOjzr7nnEOshckmyOB7HRr5He6T4uiO2gvuCWTdPrZg'
             }
 
         ]
     };
     renderList = (photos)=>{
-        return photos.map(photo=><Photo src={photo.src}/>)
+        return photos.map(photo=><Photo key={photo.id} src={photo.src}/>)
     };
 
     render() {
