@@ -4,22 +4,20 @@ import * as axios from 'axios';
 import userPhoto from '../../assets/images/user-icon-small.png';
 
 class Users extends React.Component {
+    constructor(props) {
+        super(props);
 
-    getUsers = () => {
-        if (this.props.users.length === 0) {
+        axios.get("http://localhost:8000/api/users")
+            .then(response => {
+                this.props.setUsers(response.data.users);
+            });
 
-            axios.get("http://localhost:8000/api/users")
-                .then(response => {
-                    this.props.setUsers(response.data.users);
-                });
-        }
-    };
+    }
 
     render() {
         return (
 
             <div>
-                <button onClick={this.getUsers}>Get Users</button>
                 {
 
                     this.props.users.map(user =>
